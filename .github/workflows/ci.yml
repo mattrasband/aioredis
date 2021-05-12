@@ -114,7 +114,7 @@ jobs:
         make ci-test
         python -m coverage xml
     - name: Upload coverage
-      uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v1.5.0
       with:
         file: ./coverage.xml
         flags: unit
@@ -179,7 +179,7 @@ jobs:
       run: |
         python -m pytest -svv --cov --cov-report=xml --junitxml=coverage.xml --redis-server=C:\\ProgramData\\chocolatey\\lib\\redis-64\\redis-server.exe
     - name: Upload coverage
-      uses: codecov/codecov-action@v1
+      uses: codecov/codecov-action@v1.5.0
       with:
         file: ./coverage.xml
         flags: unit
